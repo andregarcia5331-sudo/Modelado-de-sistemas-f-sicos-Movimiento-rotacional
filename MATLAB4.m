@@ -1,6 +1,6 @@
-% Parametros del problema
+
 m = 10;     % kg
-r = 0.05;   % m
+r = 0.05;   
 k = 100;    % N/m
 
 % Condiciones iniciales [theta(0); dtheta(0)]
