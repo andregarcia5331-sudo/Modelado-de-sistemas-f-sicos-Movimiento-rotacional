@@ -1,21 +1,21 @@
 
-m = 10;     % kg
+m = 10;     
 r = 0.05;   
-k = 100;    % N/m
+k = 100;    
 
-% Condiciones iniciales [theta(0); dtheta(0)]
+
 x0 = [0; 2]; 
 
-% Tiempo de simulacion
+
 tspan = [0 10];
 
-% Sistema en espacio de estados
+
 sistema_ods = @(t, x) [x(2); -(2*k)/(3*m)*x(1)];
 
-% Simulacion con ode45
+
 [t, x] = ode45(sistema_ods, tspan, x0);
 
-% Graficas
+
 figure;
 subplot(2,1,1);
 plot(t, x(:,1), 'b', 'LineWidth', 1.5);
